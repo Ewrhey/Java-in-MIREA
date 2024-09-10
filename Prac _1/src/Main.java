@@ -49,17 +49,7 @@ public class Main {
         print_int_array(array);
         System.out.println("max number: " + max_int(array));
     }
-
-//*
-    public static void task_3() {
-        float[] array = new float[10];
-        float n = 0;
-        for (float i : array) {
-            i = (float) 1 / n;
-            n++;
-        }
-    } //*/
-
+    
     public static void main(String[] args) {
         task_1();
         task_2();
