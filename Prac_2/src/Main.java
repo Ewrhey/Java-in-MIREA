@@ -51,7 +51,10 @@ public class Main {
 
     private static void task_10(String[] args) {
         int numberWords = 0;
-        System.out.println("Words in command line: ");
+        System.out.println("Input in cmd: ");
+        for (String s : args)
+            System.out.println(s);
+        System.out.println("\nWords in command line: ");
         for (String s : args)
             if (isWord(s)) {
                 System.out.println(s);
