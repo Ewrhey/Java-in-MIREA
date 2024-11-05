@@ -1,4 +1,33 @@
 public class Main {
+
+    private static void task_2_3(){
+                MovablePoint point = new MovablePoint(1,2,3,4);
+                MovableRectangle rect = new MovableRectangle(
+                        11, 1,
+                        21, 11,
+                        8, 9,
+                        8, 9
+                );
+
+                System.out.println("Test MovablePoint:");
+                System.out.println("Before moving:\n" + point);
+                point.moveDown();
+                point.moveRight();
+                System.out.println("\nAfter moving:\n" + point);
+
+                System.out.println("\nTest MovableRectangle:");
+                System.out.println("Before moving:\n" + rect);
+                if (rect.checkSameSpeed()) {
+                    rect.moveUp();
+                    rect.moveRight();
+                    System.out.println("\nAfter moving:\n" + rect);
+                }
+                else {
+                    System.out.println("\nRectangle can't moving because speeds aren't equal\n");
+                }
+
+    }
+
     private static void task_5_6() {
         String string = "Testing string: Hello, World!";
         ProcessString processString = new ProcessString();
@@ -8,7 +37,6 @@ public class Main {
 
 
     }
-
 
     private static void task_7_8() {
         Printable[] printableArray = new Printable[6];
@@ -27,5 +55,6 @@ public class Main {
     public static void main(String[] args) {
         //task_7_8();
         //task_5_6();
+        task_2_3();
     }
 }
