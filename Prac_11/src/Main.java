@@ -2,6 +2,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
 import java.util.Scanner;
 
 
@@ -43,9 +44,39 @@ public class Main {
         }
     }
 
+    public static boolean check_date(String year, String mont, String day, String hours, String minutes){
+        final int[] dayInMonth = {};
+
+
+
+        return true;
+    }
+
+    public static  void task_4(){
+        Scanner scanner = new Scanner(System.in);
+        String year, month, day, hours, minutes;
+        System.out.print("Input year: ");
+        year = scanner.next();
+        System.out.print("Input month: ");
+        month = scanner.next();
+        System.out.print("Input day: ");
+        day = scanner.next();
+        System.out.print("Input hour: ");
+        hours = scanner.next();
+        System.out.print("Input minute: ");
+        minutes = scanner.next();
+
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Integer.parseInt(year), Integer.parseInt(month) - 1,
+                Integer.parseInt(day), Integer.parseInt(hours),Integer.parseInt(minutes));
+
+        System.out.println("Созданный Calendar: " + calendar.getTime());
+
+        scanner.close();
+    }
 
 
     public static void main(String[] args) {
-
+        task_4();
     }
 }
