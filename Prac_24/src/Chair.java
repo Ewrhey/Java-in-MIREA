@@ -1,0 +1,3 @@
+interface Chair {
+    void sit();
+}
